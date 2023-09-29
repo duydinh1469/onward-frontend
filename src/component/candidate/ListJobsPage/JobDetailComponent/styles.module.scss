@@ -6,11 +6,11 @@
   top: calc($navbar-height + 0.5rem);
 }
 
-.jobDetailContainer[data-noaction="true"] {
+.jobDetailContainer[data-noaction="true"][data-aspage="false"] {
   max-height: 52vh;
 }
 
-.jobDetailContainer[data-noaction="false"] {
+.jobDetailContainer[data-noaction="false"][data-aspage="false"] {
   max-height: 45vh;
 }
 

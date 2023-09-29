@@ -29,7 +29,7 @@ function CustomPagination({ totalPage, current, onChange, range, style }) {
           count={totalPage}
           page={current}
           onChange={onChangeFnc}
-          siblingCount={getRange(range)}
+          // siblingCount={getRange(range)}
           shape="rounded"
           color="blueTheme"
         />

@@ -139,7 +139,8 @@ function HREditJobPage() {
         }),
         jobMaxSalary: jobDetailQuery.data.maxSalary,
         jobMinSalary: jobDetailQuery.data.minSalary,
-        jobSalaryCurrency: jobDetailQuery.data.currencyId,
+        jobSalaryCurrency:
+          jobDetailQuery.data.currencyId || currencyQuery?.data?.[0].id,
         jobPackage: jobPackage[0].value,
         jobVisible: jobDetailQuery.data.visible,
       }}
