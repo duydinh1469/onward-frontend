@@ -3,6 +3,7 @@ import {
   AccountCircle,
   AdminPanelSettings,
   Business,
+  Logout,
   ManageAccounts,
   Menu,
   MenuOpen,
@@ -25,11 +26,12 @@ import Loading from "component/shared/Loading/Loading";
 import { useAuth } from "contexts/AuthContext/AuthContext";
 import { useState } from "react";
 import MenuComponent from "component/shared/Menu/MenuComponent";
+import { toast } from "react-toastify";
 
 function HRLayout() {
   const companyPoints = useHrCompanyPoints();
   const companyProfileQuery = useHrCompanyGeneralProfile();
-  const { userAuth } = useAuth();
+  const { userAuth, logout } = useAuth();
   const hrPfp = userAuth.data;
 
   const navigate = useNavigate();
@@ -145,13 +147,31 @@ function HRLayout() {
         handleClose={handleCategoryClose}
         marginTop={0}
         showArrow={false}
-        menuList={categories.map((category) => {
-          return {
-            icon: category.icon,
-            title: category.label,
-            onClick: () => navigate(category.path),
-          };
-        })}
+        menuList={[
+          ...categories.map((category) => {
+            return {
+              icon: category.icon,
+              title: category.label,
+              onClick: () => navigate(category.path),
+            };
+          }),
+          {
+            icon: <Logout fontSize="small" />,
+            title: "Logout",
+            textColor: "red",
+            onClick: () =>
+              logout(
+                {
+                  onSuccess: () => {
+                    toast.success("Logout successfully");
+                    navigate("/");
+                  },
+                  onError: (error) => toast.error(error?.data?.message),
+                },
+                false
+              ),
+          },
+        ]}
       />
     </nav>
   );
