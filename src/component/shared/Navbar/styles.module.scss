@@ -144,7 +144,7 @@ $navbar-itemPadding: calc(($navbar-height - $font-size-normal * 1.2) / 2);
   display: none;
 }
 
-@media only screen and (max-width: 970px) {
+@media only screen and (max-width: 1200px) {
   .navbarList {
     display: none;
   }

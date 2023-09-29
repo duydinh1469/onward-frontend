@@ -22,6 +22,10 @@ function CompanyProfileCard({ type = "row", companyName, isEdit, setIsEdit }) {
     }
   }, [isEdit]);
 
+  useEffect(() => {
+    !getValues("companyAvatarLink") && !avatarLoaded && setAvatarLoaded(true);
+  }, []);
+
   const onChangeWall = (event) => {
     if (event.target.files.length > 0) {
       setUploadWall(event.target.files[0]);

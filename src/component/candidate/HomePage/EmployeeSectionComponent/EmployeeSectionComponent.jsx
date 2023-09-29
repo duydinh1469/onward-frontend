@@ -1,8 +1,16 @@
 import Button from "component/shared/Button/Button";
 import styles from "./styles.module.scss";
 import employeeImg from "assets/images/employee.png";
+import { useAuth } from "contexts/AuthContext/AuthContext";
+import { useNavigate } from "react-router-dom";
 
 function EmployeeSectionComponent() {
+  const navigate = useNavigate();
+  const { userAuth } = useAuth();
+  const { data } = userAuth.data;
+
+  if (!data?.role?.includes("ANONYMOUS")) return <></>;
+
   return (
     <div className={styles.employeeSectionContainer}>
       <div className={styles.employeeSection}>
@@ -14,6 +22,7 @@ function EmployeeSectionComponent() {
           size="large"
           type="actionOutline"
           extraStyle={{ borderColor: "white", color: "white" }}
+          onClickFnc={() => navigate("/authenticate/employer-register")}
         >
           Đăng tuyển ngay
         </Button>

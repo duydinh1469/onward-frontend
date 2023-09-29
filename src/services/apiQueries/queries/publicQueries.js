@@ -14,6 +14,7 @@ const useCityQuery = (countryCode) => {
   return useQuery({
     queryKey: ["city"],
     queryFn: () => cityService({ countryCode: countryCode || "VN" }),
+    staleTime: 10 * 60 * 1000,
   });
 };
 
@@ -21,6 +22,7 @@ const useCompanyScaleQuery = () => {
   return useQuery({
     queryKey: ["company", "scale"],
     queryFn: () => companyScaleService(),
+    staleTime: 10 * 60 * 1000,
   });
 };
 
@@ -28,6 +30,7 @@ const useJobTypeQuery = () => {
   return useQuery({
     queryKey: ["jobType"],
     queryFn: () => jobTypeService(),
+    staleTime: 10 * 60 * 1000,
   });
 };
 
@@ -35,6 +38,7 @@ const useCurrencyQuery = () => {
   return useQuery({
     queryKey: ["currency"],
     queryFn: () => currencyService(),
+    staleTime: 5 * 60 * 1000,
   });
 };
 

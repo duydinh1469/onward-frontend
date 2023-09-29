@@ -1,3 +1,4 @@
+import styles from "./styles.module.scss";
 import { AccountCircle, Key } from "@mui/icons-material";
 import Button from "component/shared/Button/Button";
 import FormContainer from "component/shared/Form/FormContainer/FormContainer";
@@ -6,7 +7,7 @@ import { TextInputComponent } from "component/shared/Input";
 import { useAuth } from "contexts/AuthContext/AuthContext";
 import { useEffect } from "react";
 import { useForm } from "react-hook-form";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import yup from "yup/yupGlobal";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { toast } from "react-toastify";
@@ -52,36 +53,45 @@ function SignInPage() {
   };
 
   return (
-    <FormContainer formMethods={formMethods} onSubmit={handleSubmit}>
-      <FormItem
-        name="emailSignIn"
-        clearError={true}
-        label="Email"
-        required={true}
-      >
-        <TextInputComponent
-          placeholder="Email"
-          startAdornment={<AccountCircle />}
-        />
-      </FormItem>
+    <>
+      <FormContainer formMethods={formMethods} onSubmit={handleSubmit}>
+        <FormItem
+          name="emailSignIn"
+          clearError={true}
+          label="Email"
+          required={true}
+        >
+          <TextInputComponent
+            placeholder="Email"
+            startAdornment={<AccountCircle />}
+          />
+        </FormItem>
 
-      <FormItem
-        name="passwordSignIn"
-        clearError={true}
-        label="Password"
-        required={true}
-      >
-        <TextInputComponent
-          placeholder="Password"
-          type="password"
-          startAdornment={<Key />}
-          passwordSwitch={true}
-        />
-      </FormItem>
-      <Button isSubmit={true} extraStyle={{ width: "100%", marginTop: "5px" }}>
-        Sign In
-      </Button>
-    </FormContainer>
+        <FormItem
+          name="passwordSignIn"
+          clearError={true}
+          label="Password"
+          required={true}
+        >
+          <TextInputComponent
+            placeholder="Password"
+            type="password"
+            startAdornment={<Key />}
+            passwordSwitch={true}
+          />
+        </FormItem>
+        <Button
+          isSubmit={true}
+          extraStyle={{ width: "100%", marginTop: "5px" }}
+        >
+          Sign In
+        </Button>
+      </FormContainer>
+      <p className={styles.registerRedirect}>
+        Don't have an account?{" "}
+        <Link to="/authenticate/jobseeker-register">Register now</Link>
+      </p>
+    </>
   );
 }
 

@@ -89,7 +89,11 @@ function Navbar() {
       <div className={styles.navbarSettingContainer}>
         {status === 401 ? (
           <div className={styles.navbarAuth}>
-            <p onClick={() => navigate("/authenticate/signin")}>Sign in</p>
+            <p onClick={() => navigate("/authenticate/signin")}>Sign In</p>
+            <span>&nbsp;</span>
+            <p onClick={() => navigate("/authenticate/jobseeker-register")}>
+              Sign Up
+            </p>
             <span>&nbsp;</span>
             <p onClick={() => navigate("/authenticate/employer-register")}>
               Employers
