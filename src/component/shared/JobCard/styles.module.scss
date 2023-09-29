@@ -1,0 +1,107 @@
+@use "../../../assets/styles/" as *;
+
+.jobCard {
+  margin-bottom: 15px !important;
+}
+
+.jobCardContainer {
+  padding: 10px !important;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  width: 100%;
+}
+
+.jobCardCompanyLogo {
+  font-size: 12px;
+  max-width: min(25%, 15rem);
+  flex-shrink: 0;
+}
+
+.jobCardCompanyEmptyLogo {
+  width: 25%;
+  max-width: 100px;
+  padding-bottom: min(25%, 100px);
+  height: 0;
+  flex-shrink: 0;
+  position: relative;
+  border: 1px solid $border-color;
+  border-radius: 4px;
+}
+
+.jobCardCompanyDefaultIcon {
+  position: absolute;
+  font-size: 60px !important;
+  top: 50%; /* position the top  edge of the element at the middle of the parent */
+  left: 50%; /* position the left edge of the element at the middle of the parent */
+  transform: translate(-50%, -50%);
+}
+
+.jobCardInfo {
+  font-size: 14px;
+  color: rgb(126, 126, 126);
+  a {
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
+  }
+
+  &Status {
+    color: $palette-red;
+    font-weight: 500;
+    font-size: 12px;
+  }
+
+  &Position {
+    color: $color-black;
+    margin-bottom: 5px;
+    font-size: 18px;
+    font-weight: 700;
+
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* number of lines to show */
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+  }
+
+  &Company {
+    margin-bottom: 5px;
+  }
+
+  &Location {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    svg {
+      margin-right: 5px;
+      font-size: 20px;
+    }
+  }
+
+  &PostDate {
+    display: flex;
+    align-items: center;
+    svg {
+      margin-right: 5px;
+      font-size: 20px;
+    }
+  }
+
+  &Requirement {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-top: 0.5rem;
+    span {
+      font-weight: 600;
+      padding-right: 0.5rem;
+    }
+    i {
+      margin-right: 0.6rem;
+    }
+  }
+}

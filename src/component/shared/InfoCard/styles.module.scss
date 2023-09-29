@@ -1,0 +1,160 @@
+@use "../../../assets/styles/" as *;
+
+.infoCard {
+  margin-bottom: 2rem;
+}
+
+.infoCardMediaBackdrop {
+  height: 230px;
+  background-color: rgb(233, 241, 255);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: $palette-blue;
+}
+
+.infoCardMediaImg {
+  max-height: 230px;
+}
+
+.infoCardAvatarContainer {
+  display: flex;
+  gap: 1%;
+  //   align-items: flex-end;
+  padding: 0 16px !important;
+  margin: max(-75px, -12.5%) 15px 0px 15px;
+  h1 {
+    font-size: 27px;
+  }
+  h3 {
+    color: $color-theme-gray;
+  }
+}
+
+.infoCardAvatarColumn {
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  h1 {
+    margin-top: 15px;
+  }
+}
+
+.infoCardAvatarRow {
+  align-items: flex-end;
+}
+
+.infoCardAvatarBox {
+  width: 25%;
+  max-width: 150px;
+  padding-bottom: min(25%, 150px);
+  height: 0;
+  flex-shrink: 0;
+  position: relative;
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 50%;
+  background-color: $palette-oldYellow;
+  overflow: hidden;
+}
+
+.infoCardAvatarInner {
+  position: absolute;
+  top: 50%; /* position the top  edge of the element at the middle of the parent */
+  left: 50%; /* position the left edge of the element at the middle of the parent */
+  transform: translate(-50%, -50%);
+  svg {
+    font-size: 90px !important;
+    color: $palette-blue;
+  }
+  img {
+    width: 154px;
+    height: 154px;
+    object-fit: cover;
+  }
+}
+
+.infoCardTitleColumn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.infoCardTitleRow {
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-between;
+  align-items: center;
+}
+
+// .infoCardFollowAction {
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   button {
+//     margin-bottom: 7px;
+//     margin-top: 10px;
+//   }
+//   p {
+//     font-weight: 500;
+//   }
+// }
+
+.infoCardTabsContainer {
+  padding: 0 16px !important;
+  margin: 15px 0px 31px 15px;
+}
+
+.infoCardSimplePfp {
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+
+  padding: 1.5rem 2rem 0 2rem;
+  h3 {
+    color: $color-theme-gray;
+  }
+}
+
+.infoCardSimplePfp[data-issimple="true"] {
+  display: flex;
+}
+
+@media only screen and (max-width: $card-breakpoint) {
+  .infoCardImgPfp {
+    display: none;
+  }
+
+  .infoCardSimplePfp[data-usemedia="true"] {
+    display: flex;
+  }
+
+  .infoCardMediaBackdrop {
+    height: 150px;
+  }
+
+  .infoCardMediaImg {
+    max-height: 150px;
+  }
+  .infoCardAvatarRow {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    h1 {
+      margin-top: 0.6rem;
+    }
+  }
+  .infoCardTitleRow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    > div:last-child {
+      margin-top: 0.6rem;
+    }
+  }
+  .infoCardTabsContainer {
+    margin-top: 0.6rem;
+  }
+}

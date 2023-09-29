@@ -1,0 +1,26 @@
+@use "../../../assets/styles/" as *;
+
+.compCreateCheckAvail {
+  &Notice {
+    margin-bottom: 24px;
+  }
+}
+
+.compCreateLocation {
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+  > div {
+    width: 50%;
+  }
+}
+
+.compCreateActionContainer {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 5px;
+  button {
+    width: 50%;
+  }
+}

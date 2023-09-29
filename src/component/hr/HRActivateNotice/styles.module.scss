@@ -1,0 +1,21 @@
+@use "../../../assets/styles/" as *;
+
+.activeNoticeContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  button {
+    padding: 0.6rem 2rem;
+  }
+}
+
+.activeNoticeTitle {
+  color: $palette-darkblue;
+  margin-bottom: 1.3rem;
+}
+
+.activeNoticeDesc {
+  color: rgb(152, 152, 152);
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}

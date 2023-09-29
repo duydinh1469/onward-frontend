@@ -1,0 +1,88 @@
+@use "../../../../assets/styles/" as *;
+
+.userCVTitle {
+  font-weight: bold;
+  font-size: 1rem;
+  margin-bottom: 7px;
+}
+
+.userCV {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 0.9rem;
+  cursor: pointer;
+  max-width: 25rem;
+  border: 1px solid rgb(225, 225, 225);
+  border-radius: 5px;
+  i {
+    font-size: 2.4rem;
+  }
+  &Name {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* number of lines to show */
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+
+    // white-space: nowrap;
+    // overflow: hidden;
+    // text-overflow: ellipsis;
+    font-weight: 500;
+  }
+  &Date {
+    font-size: 0.8rem;
+    color: rgb(171, 171, 171) !important;
+    text-decoration: none;
+  }
+  &Action {
+    display: flex;
+    gap: 2rem;
+    padding-top: 1rem;
+    font-weight: 500;
+    span {
+      padding-left: 0.5rem;
+    }
+    > :first-child {
+      cursor: pointer;
+      padding: 0.2rem;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    > :last-child {
+      cursor: pointer;
+      color: red;
+      padding: 0.2rem;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.userCVUpload {
+  input[type="file"] {
+    display: none;
+  }
+  &[data-isedit="false"] {
+    cursor: auto;
+  }
+
+  &IconBtn {
+    line-height: 0.5rem;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translate(50%, -50%);
+    opacity: 0.5;
+    cursor: pointer;
+    padding: 0.35rem;
+    border-radius: 50%;
+    &:hover {
+      background-color: rgb(215, 215, 215);
+    }
+  }
+}

@@ -1,0 +1,32 @@
+@use "../../../../assets/styles/" as *;
+
+.recentJobContainer {
+  margin-top: $homepage-container-mg-top;
+}
+
+.recentJobTitle {
+  color: $color-theme-darkblue;
+  font-size: $font-size-header;
+  padding-bottom: $homePage-title-pd-bottom;
+  text-align: center;
+}
+
+.recentJobList {
+  display: flex;
+  column-gap: 1rem;
+  row-gap: 0;
+  flex-wrap: wrap;
+  > div {
+    width: calc(50% - 1rem);
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .recentJobList {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    > div {
+      width: 100%;
+    }
+  }
+}

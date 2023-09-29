@@ -1,0 +1,51 @@
+@use "../../../assets/styles/" as *;
+
+.actionBoxContainer {
+  position: sticky;
+  bottom: 10px;
+  margin-top: 1em;
+  z-index: 100;
+}
+
+.actionBoxAction {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 60%;
+  margin: auto;
+  padding: 10px 10px 10px 20px;
+  background-color: $color-black;
+  color: $color-white;
+  border-radius: 5px;
+
+  &Text {
+    font-weight: 500;
+  }
+  &ButtonGroup {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+  }
+  &Reset {
+    color: $palette-red;
+    font-weight: 500;
+  }
+  &Reset:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .actionBoxAction {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .actionBoxActionText {
+    display: none;
+  }
+}

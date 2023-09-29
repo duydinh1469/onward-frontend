@@ -1,0 +1,50 @@
+@use "../../../assets/styles/" as *;
+.listFavoriteTitle {
+  margin-bottom: 1rem;
+}
+
+.listFavoriteAction {
+  &Container {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    padding-right: 0.5rem;
+  }
+  &Btn {
+    display: flex;
+    gap: 0.3rem;
+    cursor: pointer;
+    width: 6.5rem;
+    justify-content: flex-start;
+  }
+  &Btn[data-isselected="true"] {
+    color: $palette-red;
+  }
+}
+
+.listFavoriteChip {
+  position: absolute;
+  top: 0.6rem;
+  right: 0.6rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .listFavoriteChip {
+    top: auto;
+    bottom: 0rem;
+    left: 0rem;
+    width: fit-content;
+    > div {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+  }
+  .listFavoriteActionBtn {
+    width: fit-content;
+    margin-left: 2rem;
+    span {
+      display: none;
+    }
+  }
+}

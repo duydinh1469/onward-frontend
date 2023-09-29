@@ -1,0 +1,43 @@
+@use "../../../assets/styles/" as *;
+
+.managementHeader {
+  font-size: 25px;
+  margin-bottom: 15px;
+}
+
+.managementPoints {
+  display: flex;
+  gap: 5rem;
+  align-items: center;
+  &Container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: $color-black;
+    border-radius: 5px;
+    padding: 1.5rem 3rem;
+    color: white;
+    h3 {
+      margin-bottom: 1rem;
+    }
+  }
+  &Balance {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.5rem;
+    color: orange;
+    font-weight: 500;
+    svg {
+      width: 2rem;
+      height: 2rem;
+      color: orange;
+    }
+  }
+  &Claim {
+    text-align: center;
+    h3 {
+      margin-bottom: 0.5rem;
+    }
+  }
+}

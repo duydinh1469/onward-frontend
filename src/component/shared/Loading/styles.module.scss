@@ -1,0 +1,14 @@
+@use "../../../assets/styles/" as *;
+
+.loadingContainer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  //   width: fit-content;
+  p {
+    font-weight: 500;
+    margin-top: 1rem;
+    color: $palette-darkblue;
+    opacity: 0.7;
+  }
+}

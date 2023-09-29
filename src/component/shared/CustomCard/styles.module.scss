@@ -1,0 +1,36 @@
+@use "../../../assets/styles/" as *;
+
+.customCard {
+  margin-bottom: 15px !important;
+  &[data-clickable="true"] {
+    cursor: pointer;
+  }
+  &[data-clickable="true"]:hover {
+    background-color: rgb(247, 247, 247);
+  }
+}
+
+.customCardContainer {
+  padding: 10px !important;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  width: 100%;
+}
+
+.customCardLogoContainer {
+  position: relative;
+  width: 25%;
+  &::after {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+  }
+}
+
+.customCardLogo {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

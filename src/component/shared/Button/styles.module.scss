@@ -1,0 +1,116 @@
+@use "../../../assets/styles/" as *;
+
+.buttonType {
+  &actionFill {
+    background-color: $btn-bg-color-action;
+    color: $btn-color-fill;
+    border: 2px solid $btn-bg-color-action;
+    cursor: pointer;
+  }
+  &actionFill:hover {
+    background-image: $btn-bg-color-hover-factor;
+    border: 2px solid $btn-border-color-hover-factor;
+  }
+
+  &actionOutline {
+    background-color: transparent;
+    color: $btn-bg-color-action;
+    border: 2px solid $btn-bg-color-action;
+    cursor: pointer;
+  }
+  &actionOutline:hover {
+    background-color: $btn-bg-color-action;
+    color: $btn-color-fill;
+  }
+
+  &extraFill {
+    background-color: $btn-bg-color-extra;
+    color: $btn-color-fill;
+    border: 2px solid $btn-bg-color-extra;
+    cursor: pointer;
+  }
+  &extraFill:hover {
+    background-image: $btn-bg-color-hover-factor;
+    border: 2px solid $btn-border-color-hover-factor;
+  }
+
+  &extraOutline {
+    background-color: transparent;
+    color: $btn-bg-color-extra;
+    border: 2px solid $btn-bg-color-extra;
+    cursor: pointer;
+  }
+  &extraOutline:hover {
+    background-color: $btn-bg-color-extra;
+    color: $btn-color-fill;
+  }
+
+  &alertFill {
+    background-color: $btn-bg-color-alert;
+    border: 2px solid $btn-bg-color-alert;
+    cursor: pointer;
+  }
+  &alertFill:hover {
+    background-image: $btn-bg-color-hover-factor;
+    border: 2px solid $btn-border-color-hover-factor;
+  }
+
+  &errorFill {
+    background-color: $btn-bg-color-error;
+    border: 2px solid $btn-bg-color-error;
+    color: $btn-color-fill;
+    cursor: pointer;
+  }
+  &errorFill:hover {
+    background-image: $btn-bg-color-hover-factor;
+    border: 2px solid $btn-border-color-hover-factor;
+  }
+
+  &errorOutline {
+    background-color: transparent;
+    color: $btn-bg-color-error;
+    border: 2px solid $btn-bg-color-error;
+    cursor: pointer;
+  }
+  &errorOutline:hover {
+    background-color: $btn-bg-color-error;
+    color: $btn-color-fill;
+  }
+}
+
+.buttonSize {
+  &normal {
+    padding: $btn-padding-normal;
+    font-size: $btn-fontSize-normal;
+    svg {
+      font-size: $btn-svg-fontSize-normal;
+    }
+    border-radius: $btn-borderRadius-normal;
+    font-weight: $btn-fontWeight-normal;
+    height: fit-content;
+  }
+  &large {
+    padding: $btn-padding-large;
+    font-size: $btn-fontSize-large;
+    svg {
+      font-size: $btn-svg-fontSize-large;
+    }
+    border-radius: $btn-borderRadius-large;
+    font-weight: $btn-fontWeight-large;
+    height: fit-content;
+  }
+  &small {
+    padding: $btn-padding-small;
+    font-size: $btn-fontSize-small;
+    svg {
+      font-size: $btn-svg-fontSize-small;
+    }
+    border-radius: $btn-borderRadius-small;
+    font-weight: $btn-fontWeight-small;
+    height: fit-content;
+  }
+}
+
+.buttonDisabled {
+  pointer-events: none;
+}

@@ -1,0 +1,14 @@
+@use "../../../assets/styles/" as *;
+
+.candidateLayoutContainer {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.candidateLayoutContent {
+  padding: 30px 7% 0 7%;
+  min-height: 95vh;
+  // background-color: $palette-oldYellow;
+  position: relative;
+}

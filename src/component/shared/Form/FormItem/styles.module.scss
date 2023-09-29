@@ -1,0 +1,29 @@
+@use "../../../../assets//styles/" as *;
+
+.formItemContainer {
+  display: flex;
+  &Row {
+    flex-direction: row;
+    gap: 10px;
+  }
+  &Column {
+    flex-direction: column;
+  }
+}
+
+.formItemLabel {
+  font-weight: bold;
+  font-size: $f-size-normal;
+  color: $color-black;
+  span {
+    color: $palette-red;
+    padding-left: 3px;
+  }
+
+  &Row {
+    line-height: 40px;
+  }
+  &Column {
+    margin-bottom: 7px;
+  }
+}

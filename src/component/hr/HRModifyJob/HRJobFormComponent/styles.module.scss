@@ -1,0 +1,105 @@
+@use "../../../../assets/styles/" as *;
+
+.jobFormContainer {
+  display: flex;
+  align-items: flex-start;
+  gap: 3em;
+}
+
+.jobFormHeader {
+  font-size: 25px;
+  margin-bottom: 1rem;
+}
+
+.jobFormAction {
+  display: flex;
+  gap: 0.5em;
+  width: 30%;
+}
+
+.jobFormSwitch {
+  display: flex;
+  justify-content: flex-end;
+  width: 5.3rem;
+  height: 1.5rem;
+  border-radius: 0.75rem;
+  line-height: 1.2rem;
+  margin-bottom: 0.4rem;
+  font-size: 0.83rem;
+  padding: 0.15rem;
+  cursor: pointer;
+  background-color: rgb(237, 108, 2);
+  color: white;
+  & > p {
+    width: 4rem;
+    text-align: center;
+  }
+  &Handle {
+    width: 1.2rem;
+    height: 1.2rem;
+    background-color: white;
+    border-radius: 0.6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(237, 108, 2);
+  }
+}
+
+.jobFormSwitch[data-isvisible="true"] {
+  justify-content: flex-start;
+  flex-direction: row-reverse;
+  background-color: $color-blue;
+  .jobFormSwitchHandle {
+    color: $color-blue;
+  }
+}
+
+.jobFormDetailContainer {
+  display: flex;
+  gap: 15px;
+  align-items: flex-start;
+  > :first-child {
+    width: 70%;
+  }
+  > :last-child {
+    width: 30%;
+  }
+}
+
+.jobFormGeneralInfoContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+@media only screen and (max-width: 1000px) {
+  .jobFormDetailContainer {
+    > :first-child {
+      width: 60%;
+    }
+    > :last-child {
+      width: 40%;
+    }
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .jobFormContainer {
+    flex-direction: column;
+    gap: 0;
+    margin-bottom: 1rem;
+  }
+  .jobFormHeader {
+    margin-bottom: 0.5rem;
+  }
+  .jobFormDetailContainer {
+    flex-direction: column;
+    > :first-child {
+      width: 100%;
+    }
+    > :last-child {
+      width: 100%;
+    }
+  }
+}

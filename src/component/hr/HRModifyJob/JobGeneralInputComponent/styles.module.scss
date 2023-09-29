@@ -1,0 +1,14 @@
+@use "../../../../assets/styles/" as *;
+
+.modifyJobGeneralInfoCard {
+  &Content {
+    padding-bottom: 3px !important;
+  }
+}
+
+.modifyJobCustomLabel {
+  font-weight: bold;
+  font-size: $f-size-normal;
+  color: $color-black;
+  margin-bottom: 8px;
+}

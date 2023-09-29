@@ -1,0 +1,47 @@
+@use "../../../assets/styles/" as *;
+
+.job {
+  padding: 20px 0 0 0 !important;
+}
+
+.jobGeneralInfoContainer {
+  display: flex;
+  gap: 25%;
+  margin-bottom: 40px;
+}
+
+.jobGeneralInfoColumn {
+  :last-child {
+    margin-bottom: 0;
+  }
+}
+
+.jobGeneralInfo {
+  margin-bottom: 20px;
+  h4 {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+  }
+  svg {
+    margin-right: 5px;
+  }
+  p {
+    margin-left: 29px;
+  }
+}
+
+.jobDetailInfoContainer {
+  :last-child {
+    margin-bottom: 0;
+  }
+}
+
+.jobDetailInfo {
+  margin-bottom: 40px;
+  h3 {
+    padding-bottom: 7px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgb(231, 231, 231);
+  }
+}

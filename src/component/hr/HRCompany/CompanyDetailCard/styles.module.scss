@@ -1,0 +1,56 @@
+@use "../../../../assets/styles/" as *;
+
+.compEditCard {
+}
+
+.compEditCardContent {
+}
+
+.compEditGeneralInfo,
+.compEditGeneralInfoEx {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
+  > div {
+    width: 50%;
+  }
+}
+
+.compEditFormItem {
+  display: flex;
+  flex-direction: column;
+  &Label {
+    font-weight: bold;
+    font-size: $f-size-normal;
+    color: $color-black;
+    margin-bottom: 7px;
+  }
+  &Image {
+    margin-bottom: 1.1em;
+  }
+}
+
+.compEditUploadCard {
+  width: 20rem;
+  margin-bottom: 1.5rem;
+}
+
+@media only screen and (max-width: 1000px) {
+  .compEditGeneralInfo {
+    flex-direction: column;
+    gap: 0.1rem;
+    > div {
+      width: 100%;
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .compEditGeneralInfoEx {
+    flex-direction: column;
+    gap: 0.1rem;
+    > div {
+      width: 100%;
+    }
+  }
+}

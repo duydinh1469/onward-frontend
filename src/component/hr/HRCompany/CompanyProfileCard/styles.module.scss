@@ -1,0 +1,171 @@
+@use "../../../../assets/styles/" as *;
+
+.compProfileCard {
+  margin-bottom: 15px;
+}
+
+.compProfileCardMediaImg {
+  height: 230px;
+}
+
+.compProfileCardMediaBackdrop {
+  height: 230px;
+  background-color: rgb(233, 241, 255);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: $palette-blue;
+}
+
+.compProfileCardAvatarContainer {
+  display: flex;
+  gap: 1%;
+  //   align-items: flex-end;
+  padding: 0 16px !important;
+  margin: max(-75px, -12.5%) 15px 0px 15px;
+  h1 {
+    font-size: 27px;
+  }
+  h3 {
+    color: rgb(168, 168, 168);
+  }
+}
+
+.compProfileCardAvatarColumn {
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  h1 {
+    margin-top: 15px;
+  }
+}
+
+.compProfileCardAvatarRow {
+  align-items: flex-end;
+}
+
+.compProfileCardAvatarBox {
+  width: 25%;
+  max-width: 150px;
+  padding-bottom: min(25%, 150px);
+  height: 0;
+  flex-shrink: 0;
+  position: relative;
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 50%;
+  background-color: $palette-oldYellow;
+  overflow: hidden;
+}
+
+.compProfileCardAvatarInner {
+  position: absolute;
+  top: 50%; /* position the top  edge of the element at the middle of the parent */
+  left: 50%; /* position the left edge of the element at the middle of the parent */
+  transform: translate(-50%, -50%);
+  svg {
+    font-size: 90px !important;
+    color: $palette-blue;
+  }
+  img {
+    width: 154px;
+    height: 154px;
+    object-fit: cover;
+  }
+}
+
+.compProfileCardAvatarBackdrop {
+  width: 154px;
+  height: 154px;
+  object-fit: cover;
+  background-color: rgb(233, 241, 255);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $palette-blue;
+}
+
+.compProfileCardTitleColumn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.compProfileCardTitleRow {
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+}
+
+.compWallpaperUpload {
+  background-color: rgb(58, 81, 124);
+  opacity: 0.4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  input[type="file"] {
+    display: none;
+  }
+  svg {
+    font-size: 30px;
+  }
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.compAvatarUpload {
+  background-color: rgb(58, 81, 124);
+  opacity: 0.4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  color: white;
+  font-size: 15px;
+  // border-radius: 50%;
+  cursor: pointer;
+  input[type="file"] {
+    display: none;
+  }
+  svg {
+    font-size: 30px;
+  }
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .compProfileCardAvatarRow {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    h1 {
+      margin-top: 15px;
+    }
+  }
+  .compProfileCardTitleRow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+  }
+  .compProfileCardTitleRow[data-isedit="true"] {
+    margin-bottom: -0.5rem;
+  }
+}

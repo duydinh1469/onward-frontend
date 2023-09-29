@@ -1,0 +1,27 @@
+@use "../../../../assets/styles/" as *;
+
+.companyJobDetailCard {
+  height: 85vh;
+  position: sticky;
+  top: calc($navbar-height + 0.5rem);
+}
+
+.companyJobDetailContainer[data-noaction="true"] {
+  max-height: 58vh;
+}
+
+.companyJobDetailContainer[data-noaction="false"] {
+  max-height: 52vh;
+}
+
+.companyJobDetailContainer {
+  max-height: 52vh;
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+
+.companyJobDetailAction {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: flex-end;
+}

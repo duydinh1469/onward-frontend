@@ -1,0 +1,50 @@
+@use "../../../assets/styles/" as *;
+.listApplyTitle {
+  margin-bottom: 1rem;
+}
+
+.listApplyAction {
+  &Container {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    padding-right: 0.5rem;
+  }
+  &Btn {
+    display: flex;
+    gap: 0.3rem;
+    cursor: pointer;
+    width: 6.5rem;
+    justify-content: flex-start;
+  }
+  &Btn[data-isselected="true"] {
+    color: $palette-red;
+  }
+}
+
+.listApplyChip {
+  position: absolute;
+  top: 0.6rem;
+  right: 0.6rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .listApplyChip {
+    top: auto;
+    bottom: 0rem;
+    left: 0rem;
+    width: fit-content;
+    > div {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+  }
+  .listApplyActionBtn {
+    width: fit-content;
+    margin-left: 2rem;
+    span {
+      display: none;
+    }
+  }
+}

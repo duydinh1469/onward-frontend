@@ -1,0 +1,121 @@
+@use "../../../assets/styles/" as *;
+
+.hrPages {
+  margin: 30px 5%;
+}
+
+.hrLayoutContainer {
+  min-height: 100vh;
+  display: flex;
+  font-size: $f-size-normal;
+  align-items: stretch;
+}
+
+.hrLayoutSidebarContainer {
+  position: relative;
+  z-index: 2;
+}
+
+.hrLayoutContentContainer {
+  flex-grow: 1;
+  position: relative;
+}
+
+.hrNavbarContainer {
+  display: flex;
+  justify-content: space-between;
+  padding: 11px 20px;
+  border-bottom: 1px solid $color-theme-lightgray;
+
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 1;
+}
+
+.hrNavbarLogo {
+  display: flex;
+  align-items: center;
+  color: $logo-color;
+  cursor: pointer;
+  img {
+    width: 35px;
+  }
+  span {
+    font-size: 30px;
+    font-weight: 600;
+    margin-left: 5px;
+    font-family: $logo-font-family;
+    line-height: 40px;
+  }
+}
+
+.hrNavbarCategory {
+  display: flex;
+  align-items: center;
+  :last-child {
+    padding-right: 0;
+    border: none;
+  }
+  &Item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 2px 20px;
+    height: 40px;
+    border-right: 1px solid $color-theme-lightgray;
+    min-width: 0;
+    max-width: 270px;
+    &ElipsisNL {
+      p {
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 2; /* number of lines to show */
+        line-clamp: 2;
+        -webkit-box-orient: vertical;
+        text-overflow: ellipsis;
+      }
+    }
+    &Elipsis {
+      p {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  &MenuBtn {
+    display: none;
+    align-items: center;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  .hrNavbarCategoryItem {
+    &ElipsisNL {
+      p {
+        display: none;
+      }
+    }
+    &Elipsis {
+      p {
+        display: none;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .hrLayoutSidebarContainer {
+    display: none;
+  }
+  .hrNavbarCategoryMenuBtn {
+    display: flex;
+  }
+  .hrNavbarCategoryItem {
+    display: none;
+  }
+}

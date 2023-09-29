@@ -1,0 +1,10 @@
+@use "../../../assets//styles/" as *;
+
+.companyCreateFinishMsg {
+  p {
+    margin-bottom: 25px;
+  }
+  button {
+    width: 100%;
+  }
+}

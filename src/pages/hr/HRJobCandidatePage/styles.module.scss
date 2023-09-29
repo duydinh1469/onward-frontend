@@ -1,0 +1,59 @@
+@use "../../../assets/styles/" as *;
+
+.hrListCandidatesHeader {
+  font-size: 25px;
+  margin-bottom: 15px;
+  a {
+    cursor: pointer;
+    &:hover {
+      color: $color-blue;
+    }
+  }
+}
+
+.hrListCandidateContainer {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  > div {
+    width: calc((100% - 1rem) / 2);
+  }
+}
+
+.candidateCard {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+  &Name {
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+  &Email {
+    color: rgb(126, 126, 126);
+    span {
+      font-weight: bold;
+    }
+  }
+  &CV {
+    text-decoration: none;
+    font-style: italic;
+    font-weight: bold;
+    color: $color-blue;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .hrListCandidateContainer {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 0;
+    > div {
+      width: 100%;
+    }
+  }
+}

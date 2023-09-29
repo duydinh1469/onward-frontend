@@ -1,0 +1,66 @@
+@use "../../../assets/styles/" as *;
+
+$carousel-gap: 0.7em;
+
+.carousel {
+  position: relative;
+}
+.carousel:hover {
+  .carouselBtnPrev {
+    display: block !important;
+  }
+  .carouselBtnNext {
+    display: block !important;
+  }
+}
+
+.carouselContainer {
+  overflow: hidden;
+  position: relative;
+}
+
+.carouselContent {
+  display: flex;
+  gap: $carousel-gap;
+}
+
+.carouselItem {
+  min-width: calc((100% - 4 * $carousel-gap) / 5);
+}
+
+.carouselItem[data-carouselsize="1"] {
+  min-width: 100%;
+}
+
+.carouselItem[data-carouselsize="2"] {
+  min-width: calc((100% - 1 * $carousel-gap) / 2);
+}
+
+.carouselItem[data-carouselsize="3"] {
+  min-width: calc((100% - 2 * $carousel-gap) / 3);
+}
+
+.carouselItem[data-carouselsize="4"] {
+  min-width: calc((100% - 3 * $carousel-gap) / 4);
+}
+
+.carouselBtn {
+  background-color: rgb(185, 185, 185);
+  color: $color-white;
+  opacity: 0.5;
+  border-radius: 50%;
+  width: 1.3em !important;
+  height: 1.3em !important;
+  position: absolute;
+  top: 50%;
+  cursor: pointer;
+  &Prev {
+    transform: translate(-50%, -50%);
+    display: none !important;
+  }
+  &Next {
+    right: 0;
+    transform: translate(50%, -50%);
+    display: none !important;
+  }
+}

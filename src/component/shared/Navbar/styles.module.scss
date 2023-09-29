@@ -1,0 +1,167 @@
+@use "../../../assets/styles/" as *;
+
+$navbar-lineHeight: calc($font-size-normal * 1.2);
+$navbar-itemPadding: calc(($navbar-height - $font-size-normal * 1.2) / 2);
+
+.navbarContainer {
+  // flex container
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  // Position sticky
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 100;
+  // Navbar size
+  height: $navbar-height;
+  padding: 0 $navbar-paddingRL;
+  //General props
+  border-bottom: $border-width solid $color-theme-lightgray;
+  font-weight: $font-weight-category;
+  color: $color-theme-blackblue;
+}
+
+.navbarLink {
+  // Flex container
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  // General props
+  height: 100%;
+  line-height: $navbar-lineHeight;
+  font-size: $font-size-normal;
+}
+
+.navbarLogo {
+  // Flex container
+  display: flex;
+  align-items: center;
+  // General props
+  color: $logo-color;
+  // Logo image and text
+  img {
+    width: $logo-icon-width;
+  }
+  span {
+    font-size: $logo-font-size;
+    font-weight: $logo-font-weight;
+    margin-left: $logo-text_icon-offset;
+    font-family: $logo-font-family;
+  }
+}
+
+.navbarList {
+  // Flex container
+  display: flex;
+  gap: 2rem;
+  // List props
+  list-style-type: none;
+  // General props
+  height: 100%;
+  padding: 0;
+  // Link props
+  a {
+    padding: $navbar-itemPadding 0;
+  }
+  a:hover {
+    border-bottom: $navbar-selectedBorder solid $color-theme-blue;
+    color: $color-theme-blue;
+  }
+  &Active {
+    border-bottom: $navbar-selectedBorder solid $color-theme-blue;
+    color: $color-theme-blue;
+  }
+}
+
+.navbarSettingContainer {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  height: 100%;
+}
+
+.navbarAuth {
+  // Flex container
+  display: flex;
+  align-items: center;
+  // General props
+  height: 100%;
+  line-height: $navbar-lineHeight;
+  font-size: $font-size-normal;
+  // Setting text
+  p {
+    margin: 0;
+    padding: $navbar-itemPadding 1rem;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  p:last-child {
+    font-weight: $font-weight-title;
+    color: $color-theme-blue;
+  }
+  span {
+    line-height: $navbar-lineHeight * 2;
+    border-right: 1px solid $color-theme-lightgray;
+    padding: 0;
+    margin: 0 1rem;
+  }
+}
+
+.navbarWelcome {
+  // Flex container
+  display: flex;
+  align-items: center;
+  // General props
+  height: 100%;
+  line-height: $navbar-lineHeight;
+  font-size: $font-size-normal;
+  :hover {
+    cursor: pointer;
+  }
+
+  p {
+    padding-left: 10px;
+    font-weight: $font-weight-category;
+  }
+  span {
+    font-weight: $font-weight-title;
+  }
+}
+
+.navbarCategoryMenu {
+  //Flex container
+  align-items: center;
+  justify-content: center;
+  //General props
+  color: $color-theme-gray;
+  cursor: pointer;
+  height: 100%;
+  padding: 0.5rem;
+
+  // Hide menu btn
+  display: none;
+}
+
+@media only screen and (max-width: 970px) {
+  .navbarList {
+    display: none;
+  }
+
+  .navbarAuth {
+    display: none;
+  }
+
+  .navbarCategoryMenu {
+    display: flex;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .navbarWelcome {
+    p {
+      display: none;
+    }
+  }
+}

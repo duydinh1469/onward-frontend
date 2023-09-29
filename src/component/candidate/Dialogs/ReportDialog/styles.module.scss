@@ -1,0 +1,30 @@
+@use "../../../../assets/styles/" as *;
+
+.jobReportContainer {
+  width: 40rem;
+  span {
+    font-weight: bold;
+    font-style: italic;
+    color: $palette-red;
+  }
+}
+
+.jobReportTitle {
+  font-weight: 500;
+}
+
+.jobReportLabel {
+  font-weight: 500;
+  margin-bottom: 0.7rem;
+}
+
+.jobReportCaution {
+  color: $palette-red;
+  font-size: 0.8rem;
+  margin-bottom: 0.7rem;
+}
+
+.jobReportImgUploadCard {
+  width: 40%;
+  margin-bottom: 0.7rem;
+}

@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Shantell+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+
+//------------------------------------------------------------
+// Share
+$palette-darkblue: #2b3467;
+$palette-blue: #bad7e9;
+$palette-oldYellow: #fcffe7;
+$palette-red: #eb455f;
+
+$text-color: #5d677a;
+$border-color: rgb(214, 214, 214);
+$color-black: #20262e;
+$color-black-0: #000000;
+$color-white: #fffefa;
+$color-blue: rgb(58, 120, 255);
+$color-blue-0: #002d90;
+
+// Font Size
+$f-size-normal: 15px;
+// Previous: $f-size-small: 12px;
+$f-size-small: 14px;
+$f-size-large: 18px;
+
+// Font family
+$f-family: "Noto Sans", sans-serif;
+$f-family-0: "Shantell Sans", cursive;
+
+//------------------------------------------------------------
+// Button component
+$btn-color-fill: $color-white;
+
+$btn-bg-color-hover-factor: linear-gradient(rgb(0 0 0/20%) 0 0);
+$btn-border-color-hover-factor: rgba(0, 0, 0, 0.02);
+$btn-bg-color-action: $palette-darkblue;
+$btn-bg-color-extra: #37ad5a;
+$btn-bg-color-alert: rgb(237, 108, 2);
+$btn-bg-color-error: $palette-red;
+
+$btn-padding-normal: 8px 15px;
+$btn-padding-small: 6px 12px;
+$btn-padding-large: 8px 18px;
+
+$btn-fontSize-normal: $f-size-normal;
+$btn-fontSize-small: $f-size-small;
+$btn-fontSize-large: $f-size-large;
+
+$btn-svg-fontSize-normal: calc($f-size-normal + 3px);
+$btn-svg-fontSize-small: calc($f-size-small + 3px);
+$btn-svg-fontSize-large: calc($f-size-large + 3px);
+
+$btn-borderRadius-normal: 5px;
+$btn-borderRadius-small: 4px;
+$btn-borderRadius-large: 6px;
+
+$btn-fontWeight-normal: 500;
+$btn-fontWeight-small: 500;
+$btn-fontWeight-large: 500;
+
+//xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+// Color palette
+$color-theme-white: #fffefa;
+$color-theme-black: #000000;
+$color-theme-lightgray: #dcdcdc;
+$color-theme-gray: #6d798e;
+$color-theme-blue: #3a78ff;
+$color-theme-darkblue: #2b3467;
+$color-theme-blackblue: #20262e;
+$color-theme-red: #eb455f;
+$color-theme-orange: #ed6c02;
+$color-theme-green: #37ad5a;
+
+// Font weight
+$font-weight-category: 500;
+$font-weight-title: 700;
+
+// Border
+$border-width: 0.08rem;
+
+// Border radius
+$border-radius-normal: 0.3rem;
+
+// Font size
+$font-size-small: 0.875rem;
+$font-size-normal: 1rem;
+$font-size-title: 1.125rem;
+$font-size-subheader: 1.5rem;
+$font-size-header: 2.5rem;
+
+// Extra props
+// Button
+
+// Navbar
+$navbar-height: 4.5rem;
+$navbar-selectedBorder: 0.125rem;
+$navbar-paddingRL: 1rem;
+
+// Logo
+$logo-color: $color-theme-blue;
+$logo-icon-width: 3rem;
+$logo-font-size: $font-size-header;
+$logo-text_icon-offset: 0.7rem;
+$logo-font-family: $f-family-0;
+$logo-font-weight: $font-weight-title;
+
+// Home page
+$homepage-container-mg-top: 1rem;
+$homePage-title-pd-bottom: 1.6rem;
+$homePage-subTitle-pd-bottom: 1rem;
+$homePage-description-pd-bottom: 1rem;
+$homePage-description-width: 80%;
+
+// Item card
+
+// Detail card
+$card-breakpoint: 1300px;

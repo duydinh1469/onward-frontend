@@ -1,0 +1,20 @@
+@use "../../../assets/styles/" as *;
+
+.companyCreateLocation {
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+  > div {
+    width: 50%;
+  }
+}
+
+.companyCreateActionContainer {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 5px;
+  button {
+    width: 50%;
+  }
+}

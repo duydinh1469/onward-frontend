@@ -1,0 +1,12 @@
+@use "../../../../assets/styles/" as *;
+
+.companyPFPTabs {
+  margin-bottom: 15px !important;
+  border-bottom: 1px solid rgb(226, 226, 226);
+}
+
+.companyPFPTab {
+  text-transform: none !important;
+  font-size: 16px !important;
+  font-family: $f-family !important;
+}

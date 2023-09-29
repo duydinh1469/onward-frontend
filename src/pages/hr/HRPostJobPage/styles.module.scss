@@ -1,0 +1,24 @@
+@use "../../../assets/styles/" as *;
+
+.modifyJobHeader {
+  font-size: 25px;
+  margin-bottom: 15px;
+}
+
+.modifyJobContainer {
+  display: flex;
+  gap: 15px;
+  align-items: flex-start;
+  > :first-child {
+    width: 70%;
+  }
+  > :last-child {
+    width: 30%;
+  }
+}
+
+.modifyJobGeneralInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}

@@ -1,0 +1,48 @@
+@use "../../../../assets/styles/" as *;
+
+.introContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.introInfo {
+  width: 45%;
+  &Title {
+    color: $color-theme-darkblue;
+    font-size: $font-size-header;
+    padding-bottom: $homePage-title-pd-bottom;
+  }
+
+  &Description {
+    font-size: $font-size-title;
+    width: $homePage-description-width;
+    padding-bottom: $homePage-description-pd-bottom;
+  }
+}
+
+.introImg {
+  width: 50%;
+}
+
+@media only screen and (max-width: 900px) {
+  .introContainer {
+    flex-direction: column;
+  }
+  .introInfo {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &Title {
+      text-align: center;
+    }
+    &Description {
+      text-align: center;
+    }
+  }
+  .introImg {
+    width: 100%;
+  }
+}

@@ -1,0 +1,14 @@
+@use "../../../../assets/styles/" as *;
+
+.userInfoCustomTitle {
+  font-weight: bold;
+  font-size: 1rem;
+  margin-bottom: 7px;
+}
+
+.userInfoCustomValue {
+  padding: 8.5px 14px;
+  margin-bottom: 14px;
+  font-size: 1rem;
+  font-style: italic;
+}

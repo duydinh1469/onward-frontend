@@ -1,0 +1,13 @@
+@use "../../../assets/styles/" as *;
+
+.companyInfo {
+  display: flex;
+  gap: 15px;
+  align-items: flex-start;
+  > div:first-child {
+    width: 70%;
+  }
+  > div:last-child {
+    flex-grow: 1;
+  }
+}

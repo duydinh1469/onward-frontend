@@ -1,0 +1,33 @@
+@use "../../../../assets/styles/" as *;
+
+.jobDetailCardAsPage {
+  height: 85vh;
+  position: sticky;
+  top: calc($navbar-height + 0.5rem);
+}
+
+.jobDetailContainer[data-noaction="true"] {
+  max-height: 52vh;
+}
+
+.jobDetailContainer[data-noaction="false"] {
+  max-height: 45vh;
+}
+
+.jobDetailContainer[data-aspage="false"] {
+  // max-height: 45vh;
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+
+.jobDetailTab {
+  text-transform: none !important;
+  font-size: $font-size-normal !important;
+  font-family: $f-family !important;
+}
+
+.jobDetailAction {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: flex-end;
+}

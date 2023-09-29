@@ -1,0 +1,14 @@
+@use "../../../assets/styles/" as *;
+
+.dialogAction {
+  &Reset {
+    color: $palette-red;
+    font-weight: 500;
+    padding: 0 1.5rem;
+    font-size: 0.875rem;
+  }
+  &Reset:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}

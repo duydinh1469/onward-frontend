@@ -1,0 +1,18 @@
+@use "../../../../assets/styles/" as *;
+
+.getStartedContainer {
+  text-align: center;
+  padding: 3.2rem 0;
+  border-radius: 2rem;
+  background-color: #d2e8f9;
+  margin-bottom: 2.5rem;
+}
+
+.getStartedTitle {
+  color: $color-theme-darkblue;
+  font-size: $font-size-header;
+  padding-bottom: 2.5rem;
+  font-weight: $font-weight-title;
+  width: 70%;
+  margin: 0 auto;
+}

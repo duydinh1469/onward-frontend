@@ -1,0 +1,23 @@
+.candidateProfile {
+  padding-bottom: 2rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  &Categories {
+    width: 30%;
+  }
+  &Detail {
+    width: 70%;
+  }
+}
+
+@media only screen and (max-width: 970px) {
+  .candidateProfile {
+    &Categories {
+      display: none;
+    }
+    &Detail {
+      width: 100%;
+    }
+  }
+}

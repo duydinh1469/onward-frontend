@@ -1,0 +1,21 @@
+@use "../../../assets/styles/" as *;
+.errorContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  h2 {
+    color: $palette-darkblue;
+    margin-bottom: 0.5rem;
+  }
+  p {
+    color: rgb(152, 152, 152);
+    margin-bottom: 1.5rem;
+  }
+}
+
+.errorImage {
+  width: 30%;
+  min-width: 400px;
+  height: auto;
+  margin-bottom: 0.5rem;
+}

@@ -1,0 +1,46 @@
+@use "../../../../assets/styles/" as *;
+
+.employeeSectionContainer {
+  //Flex container
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  //Gradient color overflow container padding
+  box-shadow: -10vmax 0 0 0 rgba(58, 120, 255, 1),
+    10vmax 0 0 0 rgba(0, 79, 255, 0.2);
+  background-image: linear-gradient(
+    to right,
+    rgba(58, 120, 255, 1),
+    rgba(0, 79, 255, 0.2)
+  );
+  //General props
+  padding: 1rem 0;
+}
+
+.employeeSection {
+  padding: $homePage-description-pd-bottom;
+  &Title {
+    color: $color-white;
+    font-size: $font-size-header;
+    padding-bottom: $homePage-title-pd-bottom;
+    font-weight: $font-weight-category;
+  }
+  &Description {
+    color: $color-theme-white;
+    font-size: $font-size-normal;
+    padding-bottom: $homePage-description-pd-bottom;
+  }
+}
+
+.employeeSectionImg {
+  width: 45%;
+}
+
+@media only screen and (max-width: 900px) {
+  .employeeSectionContainer {
+    flex-direction: column;
+  }
+  .employeeSectionImg {
+    width: 100%;
+  }
+}

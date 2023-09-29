@@ -1,0 +1,30 @@
+.userSettingCard {
+  padding: 25px 25px 15px 25px;
+  max-width: 60rem;
+  margin: 0 auto;
+  > h1 {
+    font-size: 25;
+    margin-bottom: 25px;
+  }
+}
+
+.userSettingCardContainer {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  > :first-child {
+    width: 30%;
+  }
+  > :last-child {
+    width: 70%;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .userSettingCardContainer {
+    flex-direction: column;
+    > :last-child {
+      width: 100%;
+    }
+  }
+}
