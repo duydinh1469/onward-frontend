@@ -48,6 +48,7 @@ function HREditJobPage() {
   const visibleJobMutation = useVisibleJobMutation(jobId);
 
   const handleSubmit = (data) => {
+    console.log(data);
     const requestData = {
       // Job detail
       title: data.jobTitle,

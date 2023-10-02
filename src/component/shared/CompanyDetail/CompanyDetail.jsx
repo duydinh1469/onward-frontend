@@ -73,7 +73,8 @@ function CompanyDetail({
           {companyDetail?.about && (
             <div className={styles.companyDetailInfo}>
               <h3>Giới thiệu công ty</h3>
-              <p>{companyDetail.about}</p>
+              {/* <p>{companyDetail.about}</p> */}
+              <div dangerouslySetInnerHTML={{ __html: companyDetail.about }} />
             </div>
           )}
 

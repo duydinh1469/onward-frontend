@@ -10,7 +10,12 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { toast } from "react-toastify";
 
 const schema = yup.object().shape({
-  companyAddress: yup.string().required("Address is required"),
+  companyAddress: yup
+    .string()
+    .transform((value) =>
+      value.replace(/<(.|\n)*?>/g, "").trim().length === 0 ? null : value
+    )
+    .required("Address is required"),
   companyScale: yup
     .object({
       value: yup.string().required(),
@@ -18,7 +23,12 @@ const schema = yup.object().shape({
     })
     .typeError("Invalid business scale")
     .required("Business scale is required"),
-  companyWebsite: yup.string().required("Website is required"),
+  companyWebsite: yup
+    .string()
+    .transform((value) =>
+      value.replace(/<(.|\n)*?>/g, "").trim().length === 0 ? null : value
+    )
+    .required("Website is required"),
   companyCity: yup
     .object({
       value: yup.string().required(),
@@ -33,8 +43,18 @@ const schema = yup.object().shape({
     })
     .typeError("Invalid district")
     .required("District is required"),
-  companyDescription: yup.string().required("Description is required"),
-  companyRepresenter: yup.string().required("Representer is required"),
+  companyDescription: yup
+    .string()
+    .transform((value) =>
+      value.replace(/<(.|\n)*?>/g, "").trim().length === 0 ? null : value
+    )
+    .required("Description is required"),
+  companyRepresenter: yup
+    .string()
+    .transform((value) =>
+      value.replace(/<(.|\n)*?>/g, "").trim().length === 0 ? null : value
+    )
+    .required("Representer is required"),
 });
 
 function CompanyFormComponent({

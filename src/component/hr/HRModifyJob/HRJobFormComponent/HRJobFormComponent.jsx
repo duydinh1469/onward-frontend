@@ -24,10 +24,30 @@ import yup from "yup/yupGlobal";
 import { yupResolver } from "@hookform/resolvers/yup";
 
 const schema = yup.object().shape({
-  jobTitle: yup.string().required("Title is required"),
-  jobDescription: yup.string().required("Description is required"),
-  jobBenefit: yup.string().required("Benefit is required"),
-  jobRequirement: yup.string().required("Requirement is required"),
+  jobTitle: yup
+    .string()
+    .transform((value) =>
+      value.replace(/<(.|\n)*?>/g, "").trim().length === 0 ? null : value
+    )
+    .required("Title is required"),
+  jobDescription: yup
+    .string()
+    .transform((value) =>
+      value.replace(/<(.|\n)*?>/g, "").trim().length === 0 ? null : value
+    )
+    .required("Description is required"),
+  jobBenefit: yup
+    .string()
+    .transform((value) =>
+      value.replace(/<(.|\n)*?>/g, "").trim().length === 0 ? null : value
+    )
+    .required("Benefit is required"),
+  jobRequirement: yup
+    .string()
+    .transform((value) =>
+      value.replace(/<(.|\n)*?>/g, "").trim().length === 0 ? null : value
+    )
+    .required("Requirement is required"),
   jobType: yup
     .array()
     .of(

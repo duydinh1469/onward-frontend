@@ -63,7 +63,11 @@ function JobCard({ cardData, onClick, cardAction }) {
             <div className={styles.jobCardInfoRequirement}>
               <i className="fa-solid fa-feather-pointed"></i>
               <span>Requirement:</span>
-              {cardData?.requirement}
+              {/* {cardData?.requirement} */}
+              {/* <div
+                dangerouslySetInnerHTML={{ __html: cardData?.requirement }}
+              /> */}
+              {cardData?.requirement?.replace(/<(.|\n)*?>/g, " ")}
             </div>
           </div>
         </CardContent>

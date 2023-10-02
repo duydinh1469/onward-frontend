@@ -2,6 +2,7 @@ import styles from "./styles.module.scss";
 import { Card, CardContent } from "@mui/material";
 import FormItem from "component/shared/Form/FormItem/FormItem";
 import { TextInputComponent } from "component/shared/Input";
+import QuillText from "component/shared/QuillText/QuillText";
 
 function JobDetailInputComponent({ isEdit = false }) {
   return (
@@ -26,9 +27,14 @@ function JobDetailInputComponent({ isEdit = false }) {
           label="Description"
           required={isEdit}
         >
-          <TextInputComponent
+          {/* <TextInputComponent
             placeholder="Description"
             rows={7}
+            showText={!isEdit}
+            disabled={!isEdit}
+          /> */}
+          <QuillText
+            placeholder="Description"
             showText={!isEdit}
             disabled={!isEdit}
           />
@@ -40,9 +46,14 @@ function JobDetailInputComponent({ isEdit = false }) {
           label="Benefit"
           required={isEdit}
         >
-          <TextInputComponent
+          {/* <TextInputComponent
             placeholder="Benefit"
             rows={7}
+            showText={!isEdit}
+            disabled={!isEdit}
+          /> */}
+          <QuillText
+            placeholder="Benefit"
             showText={!isEdit}
             disabled={!isEdit}
           />
@@ -54,9 +65,14 @@ function JobDetailInputComponent({ isEdit = false }) {
           label="Requirement"
           required={isEdit}
         >
-          <TextInputComponent
+          {/* <TextInputComponent
             placeholder="Requirement"
             rows={7}
+            showText={!isEdit}
+            disabled={!isEdit}
+          /> */}
+          <QuillText
+            placeholder="Requirement"
             showText={!isEdit}
             disabled={!isEdit}
           />

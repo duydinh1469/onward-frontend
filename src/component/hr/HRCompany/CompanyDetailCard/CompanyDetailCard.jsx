@@ -11,6 +11,8 @@ import { useEffect, useState } from "react";
 import Carousel from "component/shared/Carousel/Carousel";
 import PictureCard from "component/shared/PictureCard/PictureCard";
 import { useDistrictMutation } from "services/apiQueries/mutations/publicMutations";
+import QuillText from "component/shared/QuillText/QuillText";
+import NoData from "component/shared/NoData/NoData";
 
 function CompanyDetailCard({ companyScale, companyCity, showText }) {
   const { getValues, setValue } = useFormContext();
@@ -177,9 +179,14 @@ function CompanyDetailCard({ companyScale, companyCity, showText }) {
             label="Description"
             required={!showText}
           >
-            <TextInputComponent
+            {/* <TextInputComponent
               placeholder="Description"
               rows={7}
+              showText={showText}
+              disabled={showText}
+            /> */}
+            <QuillText
+              placeholder="Description"
               showText={showText}
               disabled={showText}
             />
@@ -195,21 +202,25 @@ function CompanyDetailCard({ companyScale, companyCity, showText }) {
               <PictureCard useAdd={true} handleAdd={handleImageIntro} />
             </div>
           )}
-          <Carousel
-            imageArray={imageIntro.map((image, index) => (
-              <PictureCard
-                imageSrc={
-                  image.file ? URL.createObjectURL(image.file) : image.link
-                }
-                imageAlt={`compIntroImg - ${index}`}
-                key={`compIntroImg - ${index}`}
-                useDelete={showText ? false : true}
-                handleDelete={handleDeleteImage}
-                imageId={index}
-              />
-            ))}
-            size={5}
-          />
+          {imageIntro.length > 0 ? (
+            <Carousel
+              imageArray={imageIntro.map((image, index) => (
+                <PictureCard
+                  imageSrc={
+                    image.file ? URL.createObjectURL(image.file) : image.link
+                  }
+                  imageAlt={`compIntroImg - ${index}`}
+                  key={`compIntroImg - ${index}`}
+                  useDelete={showText ? false : true}
+                  handleDelete={handleDeleteImage}
+                  imageId={index}
+                />
+              ))}
+              size={5}
+            />
+          ) : (
+            <NoData />
+          )}
         </CardContent>
       </Card>
     </>

@@ -1,0 +1,33 @@
+@use "../../../assets/styles/" as *;
+
+.ql-editor {
+  min-height: 10rem !important;
+  max-height: 20rem;
+  overflow: hidden;
+  font-size: 1rem;
+}
+
+.quill > .ql-container > .ql-editor.ql-blank::before {
+  font-style: normal;
+  font-size: 1rem;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.quill.ql-showtext {
+  .ql-toolbar {
+    display: none;
+  }
+  .ql-container {
+    border-left: none;
+    border-right: none;
+  }
+}
+
+.quill.ql-error {
+  .ql-toolbar {
+    border-bottom: 1px solid $color-theme-red;
+  }
+  .ql-container {
+    border: 1px solid $color-theme-red;
+  }
+}

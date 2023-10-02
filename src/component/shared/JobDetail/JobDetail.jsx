@@ -89,15 +89,18 @@ function JobDetail({ jobDetail }) {
       <div className={styles.jobDetailInfoContainer}>
         <div className={styles.jobDetailInfo}>
           <h3>Mô tả công việc</h3>
-          <p>{jobDetail?.description}</p>
+          {/* <p>{jobDetail?.description}</p> */}
+          <div dangerouslySetInnerHTML={{ __html: jobDetail?.description }} />
         </div>
         <div className={styles.jobDetailInfo}>
           <h3>Yêu cầu ứng viên</h3>
-          <p>{jobDetail?.requirement}</p>
+          {/* <p>{jobDetail?.requirement}</p> */}
+          <div dangerouslySetInnerHTML={{ __html: jobDetail?.requirement }} />
         </div>
         <div className={styles.jobDetailInfo}>
           <h3>Quyền lợi</h3>
-          <p>{jobDetail?.benefit}</p>
+          {/* <p>{jobDetail?.benefit}</p> */}
+          <div dangerouslySetInnerHTML={{ __html: jobDetail?.benefit }} />
         </div>
       </div>
     </CardContent>
